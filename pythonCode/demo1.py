@@ -13,3 +13,4 @@ def fun():
 
 print(name)
 fun()
+print("__name__")
