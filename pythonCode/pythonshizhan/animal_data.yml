@@ -1,0 +1,30 @@
+﻿cat1: &cat1
+  name: "Tom"
+  color: "orange"
+  age: 3
+  gender: "Male"
+  hair: "short"
+
+cat2: &cat2
+  name: "miaomiao"
+  color: "white"
+  age: 2
+  gender: "Female"
+  hair: "short"
+
+dog1: &dog1
+  name: "Bob"
+  color: "gray"
+  age: 5
+  gender: "Male"
+  hair: "long"
+
+dog2: &dog2
+  name: "Mac"
+  color: "yellow"
+  age: 3
+  gender: "Male"
+  hair: "short"
+
+animals:
+  <<: *cat1

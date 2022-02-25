@@ -22,6 +22,7 @@
 # - 调用【会看家】的方法
 # - 打印【狗狗的姓名，颜色，年龄，性别，毛发】。
 # 6.使用yaml来管理实例的属性
+import yaml
 
 
 class Animals:
@@ -49,11 +50,41 @@ class Cat(Animals):
         self.hair = hair
 
     def catchRats(self):
-        print("Cat can catch rats!!!")
+        print(f"{self.name, self.color, self.age, self.gender, self.hair} has catched the rats!!!")
 
     def shout(cls):
         print("Cat shout like miaomiao!!!")
 
 
-mycat = Cat("Tom", "Orange", 3, "Famale")
-mycat.shout()
+class Dogs(Animals):
+    def __init__(self, name, color, age, gender, hair="long"):
+        self.name = name
+        self.color = color
+        self.age = age
+        self.gender = gender
+        self.hair = hair
+
+    def houseKeeping(self):
+        print(f"{self.name, self.color, self.age, self.gender, self.hair} is looking after the house!!!")
+
+    def shout(cls):
+        print("Dog shout like wangwang!!!")
+
+
+with open("animal_data.yml") as d:
+    datas = yaml.safe_load(d)
+
+print(datas)
+
+mypet = datas['animals']
+petname = mypet['name']
+petcolor = mypet['color']
+petage = mypet['age']
+petgender = mypet['gender']
+pethair = mypet['hair']
+
+mypet1 = Cat(petname, petcolor, petage, petgender, pethair)
+mypet1.catchRats()
+
+mypet2 = Dogs(petname, petcolor, petage, petgender, pethair)
+mypet2.houseKeeping()
