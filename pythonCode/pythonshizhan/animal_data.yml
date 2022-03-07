@@ -27,4 +27,4 @@ dog2: &dog2
   hair: "short"
 
 animals:
-  <<: *cat1
+  <<: *dog2
