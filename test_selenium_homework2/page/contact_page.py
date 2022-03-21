@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+from test_selenium_homework2.page.add_member_page import AddMember
 from test_selenium_homework2.page.base_page import BasePage
 
 
