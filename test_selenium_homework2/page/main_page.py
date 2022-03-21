@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from test_selenium_homework2.page.add_member_page import AddMember
+# from test_selenium_homework2.page.add_member_page import AddMember
 from test_selenium_homework2.page.base_page import BasePage
 from test_selenium_homework2.page.contact_page import Contact
 
@@ -12,11 +12,11 @@ class MainPage(BasePage):
         # 跳转，函数名可以命名为goto_xxx
         # click
         self.find(By.CSS_SELECTOR, ".index_service_cnt_itemWrap:nth-child(1)").click()
-        return AddMember(self.driver)
+        # return AddMember(self.driver)
 
-    def goto_contact(self):
-        self.find(By.ID, 'menu_contacts').click()
-        return Contact(self.driver)
-
-    def goto_import_contact(self):
-        pass
+    # def goto_contact(self):
+    #     self.find(By.ID, 'menu_contacts').click()
+    #     return Contact(self.driver)
+    #
+    # def goto_import_contact(self):
+    #     pass
