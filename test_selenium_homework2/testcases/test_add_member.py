@@ -10,11 +10,11 @@ class TestAddMember():
         # 4. 断言是否添加成功
         assert "王子涵1" in self.main.goto_add_member().add_member().get_member()
 
-    def test_get_name_list(self):
-        self.main.goto_contact().get_member()
-
     def test_add_membet_fail(self):
         assert "维恩2" not in self.main.goto_add_member().add_member_fail().get_member()
+
+    def test_delete_member(self):
+        self.main.goto_contact().delete_member()
 
     def teardown(self):
         self.main.quit()
